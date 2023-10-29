@@ -1,0 +1,27 @@
+<html xmlns="http://www.w3c.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+</h:head>
+
+<h:body style="text-align:center">
+	<p:growl id="mensajes" showDetail="true" life="2000" />
+	<h:form>
+		<p:panel header="Login" style="width:300px">
+			<h:panelGrid columns="2" cellpadding="5">
+				<h:outputLabel for="username" value="Usuario:" />
+				<p:inputText value="#{claseBean.nombre}"/>
+				<h:outputLabel for="password" value="Clave:" />
+				<p:password value="#{claseBean.clave}" id="password" required="true"
+					label="password" />
+				<f:facet name="footer">
+					<h:commandButton value="Login" action="reports"></h:commandButton>
+				</f:facet>
+			</h:panelGrid>
+		</p:panel>
+	</h:form>
+</h:body>
+
+</html>
