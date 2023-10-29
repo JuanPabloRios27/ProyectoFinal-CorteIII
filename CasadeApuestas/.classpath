@@ -33,5 +33,7 @@
 	<classpathentry kind="lib" path="lib/txw2-2.3.1.jar"/>
 	<classpathentry kind="lib" path="C:/Users/jprio/Downloads/jsf-api-2.2.0.jar"/>
 	<classpathentry kind="lib" path="C:/Users/jprio/Downloads/jsf-impl-2.2.0.jar"/>
+	<classpathentry kind="lib" path="lib/jsf-api-2.2.0.jar"/>
+	<classpathentry kind="lib" path="lib/jsf-impl-2.2.0.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
