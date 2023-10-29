@@ -8,6 +8,9 @@ import co.edu.unbosque.model.Beanapuestas;
 @Table(name="apuestas-baloto")
 @ManagedBean
 public class Beanbaloto {
+	/**
+	 * Esta variable se denomina números, y permite tener los números dados en los datos.
+	 */
 	@Column(name="Numeros")
 	private String numeros;//1-45 no se deben repetir
 
