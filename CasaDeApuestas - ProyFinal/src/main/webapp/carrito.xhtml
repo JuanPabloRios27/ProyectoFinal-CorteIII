@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+		xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Insert title here</title>
+</h:head>
+	<h:body style="text-align:center">
+	<p:growl id="mensajes" showDetail="true" life="2000" />
+	<h:form>
+			<p:panel header="Compra virtual" style="width:300px">
+			<h:panelGrid colums="4" cellpadding="5">
+			<h:outputLabel for="@next" value="Productos:"/>
+			<p:selectOneMenu id="producto" value="#{producto.tipo}" required="true">
+			<f:selectItem itemLabel="-------seleccione uno---------" itemValue="aaaaaaaa"/>
+			<f:selectItem itemLabel="zapatos" itemValue="zapatos"/>
+			<f:selectItem itemLabel="camisa" itemValue="camisa"/>
+			<f:selectItem itemLabel="reloj" itemValue="reloj"/>
+			<f:selectItem itemLabel="libro" itemValue="libro"/>
+			<f:selectItem itemLabel="computador" itemValue="computador"/>
+			</p:selectOneMenu>
+			<h:outputLabel for="cantidad" value="Cantidad:"/>
+			<p:inputNumber value="#{producto.cantidad}" id="cantidad" required="true" validator="#{producto.validate2}"/>
+			<h:outputLabel for="precio" value="Precio por unidad:"/>
+			<p:inputNumber value="#{producto.pUnidad}" id="precio" required="true" validator="#{producto.validate2}"/>
+			<h:outputLabel for="nombre" value="Nombre:"/>
+			<p:inputText value="#{producto.cNombre}" id="nombre" required="true"/>
+			<h:outputLabel for="apellido" value="Apellido:"/>
+			<p:inputText value="#{producto.apCli}" id="apellido" required="true"/>
+			<h:outputLabel for="tipoTarjeta" value="Tarjeta de credito:"/>
+			<p:selectOneRadio id="tarjeta" value="#{producto.tTarjeta}" required="true" layout="lineDirection">
+			<f:selectItem itemLabel="Visa" itemValue="Visa"/>
+			<f:selectItem itemLabel="MasterCard" itemValue="MasterCard" />
+			<f:selectItem itemLabel="American Express" itemValue="American Express"/>
+			</p:selectOneRadio>
+			<h:outputLabel for="nTarjeta" value="Numero de tarjeta:"/>
+			<p:inputNumber maxlength="16" value="#{producto.nTarjeta}"  validator="#{producto.validate3}"/>
+			<h:outputLabel for="cTarjeta" value="Comfirme el numero de tarjeta:"/>
+			<p:inputNumber maxlength="18" value="#{producto.cTarjeta}" validator="#{producto.validate3}"/>
+			<h:commandButton value="enviar" action="#{producto.envia}"></h:commandButton>
+			</h:panelGrid>
+			</p:panel>
+		</h:form>
+	</h:body>
+</html>
