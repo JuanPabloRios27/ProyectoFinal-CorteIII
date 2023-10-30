@@ -8,6 +8,7 @@ import javax.persistence.Table;
 @Table(name="apostadores")
 @ManagedBean
 public class Beanapostadores {
+	//
 	@Column(name="Cedula")
 	private String Cedula;
 	@Column(name="Nombre")
