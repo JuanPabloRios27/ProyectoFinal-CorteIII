@@ -7,7 +7,6 @@ import javax.persistence.Table;
 @Table(name="juegos")
 @ManagedBean
 public class Beanjuego {
-	//COMENTARIO
 	@Column(name="Codigo")
 	private int codigo;
 	@Column(name="Nombre")
