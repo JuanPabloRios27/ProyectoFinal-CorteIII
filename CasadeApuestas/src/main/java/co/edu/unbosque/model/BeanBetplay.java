@@ -9,6 +9,7 @@ import co.edu.unbosque.model.Beanapuestas;
 @ManagedBean
 public class BeanBetplay {
 	@Column(name="Resultado")
+	//Ese es el resoultado de los partidos
 	private int resultado;
 	@Column(name="Equipos")
 	private String equipos;
