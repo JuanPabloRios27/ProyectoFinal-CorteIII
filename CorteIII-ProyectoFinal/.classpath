@@ -38,5 +38,6 @@
 	<classpathentry kind="lib" path="lib/stax-ex-1.8.jar"/>
 	<classpathentry kind="lib" path="lib/txw2-2.3.1.jar"/>
 	<classpathentry kind="lib" path="lib/mysql-connector-java-8.0.13.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/primefaces-8.0.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
