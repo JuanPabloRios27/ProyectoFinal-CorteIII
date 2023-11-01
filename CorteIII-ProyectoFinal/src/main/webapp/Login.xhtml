@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+	xmlns:p="http://primefaces.org/ui">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Insert title here</title>
+<title>Bienvenido</title>
+
 </head>
-<frameset>
-    <frame />
-    <frame />
-    <noframes>
-    <body>
-    <p>This page uses frames. The current browser you are using does not support frames.</p>
-    </body>
-    </noframes>
-</frameset>
+<h:body>
+	<p:growl id="mensajes" showDetail="true" life="2000" />
+	<h:form>
+	<h:panelGrid columns="2" cellpadding="5">
+				<h:outputLabel for="Articulo" value="Articulo:" />
+				<p:inputText value="#{productosBean.nombre}" id="Nombre" />
+	</h:panelGrid>
+	</h:form>
+	</h:body>
 </html>
