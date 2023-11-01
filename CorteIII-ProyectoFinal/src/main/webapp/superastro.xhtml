@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Insert title here</title>
+</h:head>
+	<h:body style="text-align:center">
+	<p:growl id="mensajes" showDetail="true" life="2000" />
+	<h:form>
+			<p:panel header="SUPERASTRO" style="width:450px" >
+			<h:panelGrid colums="4" cellpadding="5">
+			<h:outputLabel for="signos" value="seleccione el signo del sodiaco:"/>
+			<p:selectOneMenu id="signos" value="#{superastro.signou}" required="true">
+			<f:selectItem itemLabel="-------seleccione un signo del sodiaco---------" itemValue="0"/>
+			<f:selectItem itemLabel="Cancer" itemValue="1"/>
+			<f:selectItem itemLabel="Libra" itemValue="2"/>
+			<f:selectItem itemLabel="Capricornio" itemValue="3"/>
+			<f:selectItem itemLabel="Virgo" itemValue="4"/>
+			<f:selectItem itemLabel="Geminis" itemValue="5"/>
+			<f:selectItem itemLabel="Tauro" itemValue="6"/>
+			<f:selectItem itemLabel="Escorpio" itemValue="7"/>
+			<f:selectItem itemLabel="Piscis" itemValue="8"/>
+			<f:selectItem itemLabel="Aries" itemValue="9"/>
+			<f:selectItem itemLabel="Acuario" itemValue="10"/>
+			<f:selectItem itemLabel="Sagitario" itemValue="11"/>
+			<f:selectItem itemLabel="Leo" itemValue="12"/>
+			</p:selectOneMenu>
+			<h:outputLabel for="texto" value="coloque un numero de cuatro cifras estre 0 y 9:"/>
+			<h:outputLabel for="numero 1" value="numero 1:"/>
+			<p:inputNumber value="#{superastro.numerou1}" id="numero1" required="true" maxlength="1"/>
+			<h:outputLabel for="numero 2" value="numero 2:"/>
+			<p:inputNumber value="#{superastro.numerou2}" id="numero2" required="true" maxlength="1"/>
+			<h:outputLabel for="numero 3" value="numero 3:"/>
+			<p:inputNumber value="#{superastro.numerou3}" id="numero3" required="true" maxlength="1"/>
+			<h:outputLabel for="numero 4" value="numero 4:"/>
+			<p:inputNumber value="#{superastro.numerou4}" id="numero4" required="true" maxlength="1"/>
+			
+			<h:commandButton value="registrar" action="#{superastro.envia}"></h:commandButton>
+			</h:panelGrid>
+			</p:panel>
+		</h:form>
+	</h:body>
+</html>

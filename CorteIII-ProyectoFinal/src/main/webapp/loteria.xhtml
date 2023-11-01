@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Insert title here</title>
+</h:head>
+	<h:body style="text-align:center">
+	<p:growl id="mensajes" showDetail="true" life="2000" />
+	<h:form>
+			<p:panel header="SUPERASTRO" style="width:450px" >
+			<h:panelGrid colums="4" cellpadding="5">
+			<h:outputLabel for="texto" value="coloque cuatro numeros:"/>
+			<h:outputLabel for="numero 1" value="numero 1:"/>
+			<p:inputNumber value="#{loteria.numero1}" id="numero1" required="true"/>
+			<h:outputLabel for="numero 2" value="numero 2:"/>
+			<p:inputNumber value="#{loteria.numro2}" id="numero2" required="true"/>
+			<h:outputLabel for="numero 3" value="numero 3:"/>
+			<p:inputNumber value="#{loteria.numero3}" id="numero3" required="true"/>
+			<h:outputLabel for="numero 4" value="numero 4:"/>
+			<p:inputNumber value="#{loteria.numero4}" id="numero4" required="true"/>
+			<h:outputLabel for="serie" value="coloque una cerie de numeros de hasta tres digitos:"/>
+			<p:inputNumber value="#{loteria.serie}" id="serie" required="true"/>
+			<h:commandButton value="registrar" action="#{superastro.envia}"></h:commandButton>
+			</h:panelGrid>
+			</p:panel>
+		</h:form>
+	</h:body>
+</html>

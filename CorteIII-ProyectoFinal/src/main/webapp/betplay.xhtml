@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Insert title here</title>
+</h:head>
+	<h:body style="text-align:center">
+	<p:growl id="mensajes" showDetail="true" life="2000" />
+	<h:form>
+			<p:panel header="BETPLAY" style="width:400px" >
+			<h:panelGrid colums="3" cellpadding="5">
+			
+			
+			<h:outputLabel for="equipos" value="seleccione el primer equipo:"/>
+			<p:selectOneMenu id="equipo1" value="#{betplay.equipo1}" required="true">
+			<f:selectItem itemLabel="-------seleccione un equipo---------" itemValue="aaaaaaaa"/>
+			<f:selectItem itemLabel="Real Madrid" itemValue="Real Madrid"/>
+			<f:selectItem itemLabel="FC Barcelona" itemValue="FC Barcelona"/>
+			<f:selectItem itemLabel="Bayern de Múnich" itemValue="Bayern de Múnich"/>
+			<f:selectItem itemLabel="Manchester City" itemValue="Manchester City"/>
+			<f:selectItem itemLabel="Liverpool" itemValue="Liverpool"/>
+			<f:selectItem itemLabel="Paris Saint-Germain" itemValue="Paris Saint-Germain"/>
+			<f:selectItem itemLabel="Juventus" itemValue="Juventus"/>
+			<f:selectItem itemLabel="Chelsea" itemValue="Chelsea"/>
+			<f:selectItem itemLabel="Borussia Dortmund" itemValue="Borussia Dortmund"/>
+			<f:selectItem itemLabel="Manchester United" itemValue="Manchester United"/>
+			<f:selectItem itemLabel="Inter de Milán" itemValue="Inter de Milán"/>
+			<f:selectItem itemLabel="Atletico de Madrid" itemValue="Atletico de Madrid"/>
+			<f:selectItem itemLabel="AC Milan" itemValue="AC Milan"/>
+			<f:selectItem itemLabel="Ajax" itemValue="Ajax"/>
+			</p:selectOneMenu>
+			<h:outputLabel for="texto" value="VS"/>
+			<h:outputLabel for="sede" value="seleccione el segundo equipo:"/>
+			<p:selectOneMenu id="sede" value="#{betplay.equipo2}" required="true">
+			<f:selectItem itemLabel="-------seleccione una sede---------" itemValue="aaaaaaaa"/>
+			<f:selectItem itemLabel="Real Madrid" itemValue="Real Madrid"/>
+			<f:selectItem itemLabel="FC Barcelona" itemValue="FC Barcelona"/>
+			<f:selectItem itemLabel="Bayern de Múnich" itemValue="Bayern de Múnich"/>
+			<f:selectItem itemLabel="Manchester City" itemValue="Manchester City"/>
+			<f:selectItem itemLabel="Liverpool" itemValue="Liverpool"/>
+			<f:selectItem itemLabel="Paris Saint-Germain" itemValue="Paris Saint-Germain"/>
+			<f:selectItem itemLabel="Juventus" itemValue="Juventus"/>
+			<f:selectItem itemLabel="Chelsea" itemValue="Chelsea"/>
+			<f:selectItem itemLabel="Borussia Dortmund" itemValue="Borussia Dortmund"/>
+			<f:selectItem itemLabel="Manchester United" itemValue="Manchester United"/>
+			<f:selectItem itemLabel="Inter de Milán" itemValue="Inter de Milán"/>
+			<f:selectItem itemLabel="Atletico de Madrid" itemValue="Atletico de Madrid"/>
+			<f:selectItem itemLabel="AC Milan" itemValue="AC Milan"/>
+			<f:selectItem itemLabel="Ajax" itemValue="Ajax"/>
+			</p:selectOneMenu>
+			<h:commandButton value="registrar" action="#{betplay.envia}"></h:commandButton>
+			</h:panelGrid>
+			</p:panel>
+		</h:form>
+	</h:body>
+</html>
