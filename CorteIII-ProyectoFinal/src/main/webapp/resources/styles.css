@@ -1,8 +1,7 @@
 @charset "UTF-8";
-.centeredMenuBar.ui-menubar {
+body {
     text-align: center;
 }
-
-.centeredMenuBar .ui-menu-list {
+form {
     display: inline-block;
 }

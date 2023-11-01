@@ -53,14 +53,6 @@ public class usuario {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public usuario(long cedula, String nombreC, String sede, String direccion, long celular, String password) {
-		super();
-		this.cedula = cedula;
-		this.nombreC = nombreC;
-		this.sede = sede;
-		this.direccion = direccion;
-		this.celular = celular;
-		this.password = password;
-	}
+	
 	
 }

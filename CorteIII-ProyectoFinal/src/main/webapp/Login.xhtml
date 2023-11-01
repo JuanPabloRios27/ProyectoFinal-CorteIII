@@ -5,6 +5,7 @@
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:fn="http://java.sun.com/jsp/jstl/functions"
 	xmlns:p="http://primefaces.org/ui">
+	<h:outputStylesheet library="css" name="styles.css"/>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>Bienvenido</title>
@@ -12,10 +13,13 @@
 </head>
 <h:body>
 	<p:growl id="mensajes" showDetail="true" life="2000" />
-	<h:form styleClass="centeredMenuBar">
+	<h:form>
 	<h:panelGrid columns="2" cellpadding="5">
 				<h:outputLabel for="Nombre" value="Numero de Documento:" />
 				<p:inputText value="#{usuario.nombreC}" id="Nombre" />
+				<h:outputLabel for="password" value="Password:" />
+            	<p:password id="password" value="#{usuario.password}" required="true" label="password" />
+            	
 	</h:panelGrid>
 	</h:form>
 	</h:body>
