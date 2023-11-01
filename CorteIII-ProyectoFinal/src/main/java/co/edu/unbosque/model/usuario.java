@@ -10,6 +10,7 @@ public class usuario {
 	private String sede;
 	private String direccion;
 	private long celular;
+	private String password;
 	
 	
 	public long getCedula() {
@@ -46,4 +47,20 @@ public class usuario {
 	public String  envia() {
 		return "seleccion-apuesta.xhtml";
 	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	public usuario(long cedula, String nombreC, String sede, String direccion, long celular, String password) {
+		super();
+		this.cedula = cedula;
+		this.nombreC = nombreC;
+		this.sede = sede;
+		this.direccion = direccion;
+		this.celular = celular;
+		this.password = password;
+	}
+	
 }

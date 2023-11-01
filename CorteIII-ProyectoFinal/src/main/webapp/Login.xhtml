@@ -12,10 +12,10 @@
 </head>
 <h:body>
 	<p:growl id="mensajes" showDetail="true" life="2000" />
-	<h:form>
+	<h:form styleClass="centeredMenuBar">
 	<h:panelGrid columns="2" cellpadding="5">
-				<h:outputLabel for="Articulo" value="Articulo:" />
-				<p:inputText value="#{.nombre}" id="Nombre" />
+				<h:outputLabel for="Nombre" value="Numero de Documento:" />
+				<p:inputText value="#{usuario.nombreC}" id="Nombre" />
 	</h:panelGrid>
 	</h:form>
 	</h:body>
