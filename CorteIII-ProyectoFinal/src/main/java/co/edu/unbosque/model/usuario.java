@@ -3,16 +3,16 @@ package co.edu.unbosque.model;
 import javax.faces.bean.ManagedBean;
 
 @ManagedBean
-public 	class usuario {
+public class usuario {
 	
-	private int cedula;
+	private long cedula;
 	private String nombreC;
 	private String sede;
 	private String direccion;
-	private int celular;
+	private long celular;
 	
 	
-	public int getCedula() {
+	public long getCedula() {
 		return cedula;
 	}
 	public void setCedula(int cedula) {
@@ -36,7 +36,7 @@ public 	class usuario {
 	public void setDireccion(String direccion) {
 		this.direccion = direccion;
 	}
-	public int getCelular() {
+	public long getCelular() {
 		return celular;
 	}
 	public void setCelular(int celular) {
