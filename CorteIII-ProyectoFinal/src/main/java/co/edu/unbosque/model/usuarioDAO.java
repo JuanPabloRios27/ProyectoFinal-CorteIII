@@ -14,7 +14,7 @@ public class usuarioDAO implements Operaciones{
 		
 	}
 	@Override
-	public String crear() {
+	public String crear(Object registro) {
 		// TODO Auto-generated method stub
 		// TODO Auto-generated method stub
 				String resultado;
