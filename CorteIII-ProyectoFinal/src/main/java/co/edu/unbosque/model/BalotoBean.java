@@ -2,7 +2,9 @@ package co.edu.unbosque.model;
 
 import java.util.Random;
 
-import javax.annotation.ManagedBean;
+import javax.faces.bean.ManagedBean;
+
+
 
 @ManagedBean
 public class BalotoBean {
