@@ -15,8 +15,6 @@ public class usuarioDAO implements Operaciones{
 	}
 	@Override
 	public String crear(Object registro) {
-		// TODO Auto-generated method stub
-		// TODO Auto-generated method stub
 				String resultado;
 				SessionFactory miFactory = new Configuration()
 						.configure("hibernate.cfg.xml")
@@ -28,7 +26,6 @@ public class usuarioDAO implements Operaciones{
 					miSession.beginTransaction();
 					miSession.save((usuario)registro);
 					miSession.getTransaction().commit();
-					//System.out.println("Registro Insertado!");
 					resultado = "OK";
 					miSession.close();
 				} catch (Exception e) {
