@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Insert title here</title>
+</h:head>
+	<h:body style="text-align:center">
+	<p:growl id="mensajes" showDetail="true" life="2000" />
+	<h:form>
+			<p:panel header="Baloto" style="width:360px;height:420px">
+			<h:panelGrid rows="7" columns="2" cellpadding="5">
+				<h:outputLabel value="Numero 1"/>
+				<p:inputNumber value="#{balotoBean.num1}" required="true"/>
+				<h:outputLabel value="Numero 2"/>
+				<p:inputNumber value="#{balotoBean.num2}" required="true"/>
+				<h:outputLabel value="Numero 3"/>
+				<p:inputNumber value="#{balotoBean.num3}" required="true"/>
+				<h:outputLabel value="Numero 4"/>
+				<p:inputNumber value="#{balotoBean.num4}" required="true"/>
+				<h:outputLabel value="Numero 5"/>
+				<p:inputNumber value="#{balotoBean.num5}" required="true"/>
+				<h:outputLabel value="Numero 6"/>
+				<p:inputNumber value="#{balotoBean.num6}" required="true"/>
+				<f:facet name="footer">
+					<h:commandButton value="Apostar" action ="#{balotoBean.envia}"/>
+				</f:facet>
+			</h:panelGrid>
+			</p:panel>
+		</h:form>
+	</h:body>
+</html>

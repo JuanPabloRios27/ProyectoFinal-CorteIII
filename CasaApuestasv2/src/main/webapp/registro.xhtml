@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Insert title here</title>
+</h:head>
+	<h:body style="text-align:center">
+	<p:growl id="mensajes" showDetail="true" life="2000" />
+	<h:form>
+			<p:panel header="Casa de apuestas don pepe" style="width:400px" >
+			<h:panelGrid colums="4" cellpadding="5">
+			<h:outputLabel for="cedula" value="digite su cedula:"/>
+			<p:inputNumber value="#{usuario.cedula}" id="cedula" required="true"/>
+			<h:outputLabel for="nombre" value="digite su nombre completo:"/>
+			<p:inputText value="#{usuario.nombreC}" id="nombre" required="true" />
+			<h:outputLabel for="sede" value="seleccione la que se encuentra:"/>
+			<p:selectOneMenu id="sede" value="#{usuario.sede}" required="true">
+			<f:selectItem itemLabel="-------seleccione una sede---------" itemValue="aaaaaaaa"/>
+			<f:selectItem itemLabel="BetPlay-Suba" itemValue="BetPlay-Suba"/>
+			<f:selectItem itemLabel="BetPlay-Fontibon" itemValue="BetPlay-Fontibon"/>
+			<f:selectItem itemLabel="BetPlay-Usaquen" itemValue="BetPlay-Usaquen"/>
+			<f:selectItem itemLabel="Wplay-Suba" itemValue="Wplay-Suba"/>
+			<f:selectItem itemLabel="Wplay-Usme" itemValue="Wplay-Usme"/>
+			<f:selectItem itemLabel="Wplay-Usaquen" itemValue="Wplay-Usaquen"/>
+			<f:selectItem itemLabel="Rushbet-Kennedy" itemValue="Rushbet-Kennedy"/>
+			<f:selectItem itemLabel="Rushbet-Usme" itemValue="Rushbet-Usme"/>
+			<f:selectItem itemLabel="Rushbet-Usaquen" itemValue="Rushbet-Usaquen"/>
+			<f:selectItem itemLabel="Codere-Engativa" itemValue="Codere-Engativa"/>
+			<f:selectItem itemLabel="Codere-Kennedy" itemValue="Codere-Kennedy"/>
+			<f:selectItem itemLabel="Codere-Suba" itemValue="Codere-Suba"/>
+			<f:selectItem itemLabel="Zamba-Fontibon" itemValue="Zamba-Fontibon"/>
+			<f:selectItem itemLabel="Zamba-Kennedy" itemValue="Zamba-Kennedy"/>
+			<f:selectItem itemLabel="Zamba-Engativa" itemValue="Zamba-Engativa"/>
+			</p:selectOneMenu>
+			<h:outputLabel for="telefono" value="digite su numero de telefono:"/>
+			<p:inputNumber value="#{usuario.celular}" id="telefono" required="true" />
+			<h:commandButton value="registrar" action="#{usuario.envia}"></h:commandButton>
+			</h:panelGrid>
+			</p:panel>
+		</h:form>
+	</h:body>
+</html>
