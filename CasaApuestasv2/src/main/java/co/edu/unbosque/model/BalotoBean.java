@@ -15,7 +15,7 @@ public class BalotoBean {
 	private int num4;
 	private int num5;
 	private int num6;
-	
+
 	private int rta1;
 	private int rta2;
 	private int rta3;
