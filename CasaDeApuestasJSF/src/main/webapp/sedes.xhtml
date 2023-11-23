@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Insert title here</title>
+</h:head>
+	<h:body style="text-align:center">
+	<h:form>
+		<p:panel>
+		<p:dataTable value="#{seleccionJuegos.sedes}" var="se">
+			<p:column headerText="Codigo:">
+			#{se.codigo}
+			</p:column>
+			<p:column headerText="Afiliacion:">
+			#{se.afiliacion}
+			</p:column>
+			<p:column headerText="Nombre:">
+			#{se.nombre}
+			</p:column>
+			<p:column headerText="Numero de trabajadores:">
+			#{se.nTrabajadores}
+			</p:column>
+		</p:dataTable>
+		<h:commandButton action="#{seleccionJuegos.enviaLimpiarSede}" value="Limpiar" style="width:200px;height:100px"/>
+		</p:panel>
+	</h:form>
+	</h:body>
+</html>
